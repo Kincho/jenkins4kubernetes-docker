@@ -1,10 +1,5 @@
 FROM jenkins
 
-RUN apt-get update && \
-      apt-get -y install sudo
+USER root
 
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
-
-USER docker
-
-RUN sudo apt install openssh-server
+RUN apt install openssh-server
