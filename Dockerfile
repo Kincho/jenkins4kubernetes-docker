@@ -2,4 +2,4 @@ FROM jenkins
 
 USER root
 
-RUN apt install openssh-server
+RUN apt-get install openssh-server
